@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<!DOCTYPE graph PUBLIC "-//John Punin//DTD graph description//EN" "http://www.cs.rpi.edu/~puninj/XGMML/xgmml.dtd">
+
+    <graph directed="1" graphic="1" Layout="points">
+
+        <node id="UserType" label="UserType&#xa;⎯⎯⎯&#xa;ADMIN&#xa;CUSTOMER&#xa;OPERATOR" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="88" y="434" h="98" w="87" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="ADMIN,CUSTOMER,OPERATOR"/>
+            <att name="meths" value=""/>
+
+            <att name="width" value="77"/>
+            <att name="height" value="74"/>
+        </node>
+        <node id="SeatType" label="SeatType&#xa;⎯⎯⎯&#xa;BUSINESS&#xa;ECONOMY" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="103" y="10" h="88" w="87" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="BUSINESS,ECONOMY"/>
+            <att name="meths" value=""/>
+
+            <att name="width" value="77"/>
+            <att name="height" value="64"/>
+        </node>
+        <node id="FlightStatus" label="FlightStatus&#xa;⎯⎯⎯&#xa;ARRIVED&#xa;CANCELLED&#xa;DELAY&#xa;INACTIVE&#xa;ONTIME" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="296" y="38" h="118" w="121" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="ARRIVED,CANCELLED,DELAY,INACTIVE,ONTIME"/>
+            <att name="meths" value=""/>
+
+            <att name="width" value="111"/>
+            <att name="height" value="94"/>
+        </node>
+        <node id="MealType" label="MealType&#xa;⎯⎯⎯&#xa;NON_VEG&#xa;NO_MEAL&#xa;VEG" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="10" y="73" h="98" w="87" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="NON_VEG,NO_MEAL,VEG"/>
+            <att name="meths" value=""/>
+
+            <att name="width" value="77"/>
+            <att name="height" value="74"/>
+        </node>
+        <node id="Meal" label="Meal&#xa;⎯⎯⎯&#xa;id&#xa;name&#xa;price&#xa;type&#xa;⎯⎯⎯&#xa;__init__" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="31" y="197" h="140" w="68" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="id,name,price,type"/>
+            <att name="meths" value="__init__"/>
+
+            <att name="width" value="58"/>
+            <att name="height" value="104"/>
+        </node>
+        <node id="Airline" label="Airline&#xa;⎯⎯⎯&#xa;id&#xa;logo_url&#xa;name&#xa;⎯⎯⎯&#xa;__init__" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="515" y="68" h="130" w="79" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="id,logo_url,name"/>
+            <att name="meths" value="__init__"/>
+
+            <att name="width" value="69"/>
+            <att name="height" value="94"/>
+        </node>
+        <node id="Airport" label="Airport&#xa;⎯⎯⎯&#xa;city&#xa;code&#xa;country&#xa;id&#xa;name&#xa;timezone&#xa;⎯⎯⎯&#xa;__init__" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="855.0" y="375.0" h="160" w="79" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="city,code,country,id,name,timezone"/>
+            <att name="meths" value="__init__"/>
+
+            <att name="width" value="69"/>
+            <att name="height" value="124"/>
+        </node>
+        <node id="FlightSchedule" label="FlightSchedule&#xa;⎯⎯⎯&#xa;booked_seats&#xa;end_airport&#xa;end_time&#xa;id&#xa;seats&#xa;start_airport&#xa;start_time&#xa;⎯⎯⎯&#xa;__init__&#xa;available_seats&#xa;book_seats&#xa;get_duration" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="351" y="560" h="200" w="138" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="booked_seats,end_airport,end_time,id,seats,start_airport,start_time"/>
+            <att name="meths" value="__init__,available_seats,book_seats,get_duration"/>
+
+            <att name="width" value="128"/>
+            <att name="height" value="164"/>
+        </node>
+        <node id="Flight" label="Flight&#xa;⎯⎯⎯&#xa;airline&#xa;flight_no&#xa;meals&#xa;schedules&#xa;status&#xa;⎯⎯⎯&#xa;__init__&#xa;add_schedule&#xa;get_flight_schedule&#xa;update_status" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="355" y="182" h="180" w="134" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="airline,flight_no,meals,schedules,status"/>
+            <att name="meths" value="__init__,add_schedule,get_flight_schedule,update_status"/>
+
+            <att name="width" value="124"/>
+            <att name="height" value="144"/>
+        </node>
+        <node id="User" label="User&#xa;⎯⎯⎯&#xa;id&#xa;password&#xa;personal_details&#xa;status&#xa;user_type&#xa;username&#xa;⎯⎯⎯&#xa;__init__&#xa;login" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="479" y="376" h="170" w="116" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="id,password,personal_details,status,user_type,username"/>
+            <att name="meths" value="__init__,login"/>
+
+            <att name="width" value="106"/>
+            <att name="height" value="134"/>
+        </node>
+        <node id="Payment" label="Payment&#xa;⎯⎯⎯&#xa;__transaction_id&#xa;amount&#xa;flight&#xa;schedule&#xa;user&#xa;⎯⎯⎯&#xa;__init__" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="205" y="136" h="150" w="116" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="__transaction_id,amount,flight,schedule,user"/>
+            <att name="meths" value="__init__"/>
+
+            <att name="width" value="106"/>
+            <att name="height" value="114"/>
+        </node>
+        <node id="Notification" label="Notification&#xa;⎯⎯⎯&#xa;__notification_id&#xa;message&#xa;user&#xa;⎯⎯⎯&#xa;__init__" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="139" y="290" h="130" w="122" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="__notification_id,message,user"/>
+            <att name="meths" value="__init__"/>
+
+            <att name="width" value="112"/>
+            <att name="height" value="94"/>
+        </node>
+        <node id="BookingDetails" label="BookingDetails&#xa;⎯⎯⎯&#xa;flight&#xa;meal&#xa;no_of_passengers&#xa;notifications&#xa;payments&#xa;pnr&#xa;schedule&#xa;status&#xa;user&#xa;⎯⎯⎯&#xa;__init__&#xa;confirm" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="301" y="376" h="200" w="138" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="flight,meal,no_of_passengers,notifications,payments,pnr,schedule,status,user"/>
+            <att name="meths" value="__init__,confirm"/>
+
+            <att name="width" value="128"/>
+            <att name="height" value="164"/>
+        </node>
+        <node id="FlightBookingSystem" label="FlightBookingSystem&#xa;⎯⎯⎯&#xa;airlines&#xa;airports&#xa;bookings&#xa;flights&#xa;users&#xa;⎯⎯⎯&#xa;__init__&#xa;add_airline&#xa;add_airport&#xa;add_flight&#xa;add_user&#xa;confirm_booking&#xa;get_schedules" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="654.0" y="25.0" h="210" w="180" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value="airlines,airports,bookings,flights,users"/>
+            <att name="meths" value="__init__,add_airline,add_airport,add_flight,add_user,confirm_booking,get_schedules"/>
+
+            <att name="width" value="170"/>
+            <att name="height" value="174"/>
+        </node>
+        <node id="Enum" label="Enum" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="137" y="77" h="36" w="54" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value=""/>
+            <att name="meths" value=""/>
+
+            <att name="width" value="44"/>
+            <att name="height" value="24"/>
+        </node>
+        <node id="dict" label="dict" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="635" y="465" h="36" w="54" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value=""/>
+            <att name="meths" value=""/>
+
+            <att name="width" value="44"/>
+            <att name="height" value="24"/>
+        </node>
+        <node id="datetime" label="datetime" weight="0">
+            <graphics type="ROUND_RECTANGLE" x="266" y="590" h="36" w="87" fill="#91CFEB" >
+                <att name="NODE_LABEL_POSITION" value="C,C,l,0.00,0.00" type="string" cy:type="String"/>
+                <att name="NODE_LABEL_FONT_SIZE" value="10" type="string" cy:type="String"/>
+            </graphics>
+            <att name="attrs" value=""/>
+            <att name="meths" value=""/>
+
+            <att name="width" value="77"/>
+            <att name="height" value="24"/>
+        </node>
+
+        <edge source="MealType" target="Enum" type="last" weight="0" label="Edge from MealType to Enum">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="NONE" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DELTA" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="SeatType" target="Enum" type="last" weight="0" label="Edge from SeatType to Enum">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="NONE" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DELTA" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="FlightStatus" target="Enum" type="last" weight="0" label="Edge from FlightStatus to Enum">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="NONE" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DELTA" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Meal" target="BookingDetails" type="last" weight="0" label="Edge from Meal to BookingDetails">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Airport" target="FlightSchedule" type="last" weight="0" label="Edge from Airport to FlightSchedule">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Airport" target="FlightBookingSystem" type="last" weight="0" label="Edge from Airport to FlightBookingSystem">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Airport" target="Flight" type="last" weight="0" label="Edge from Airport to Flight">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="User" target="FlightBookingSystem" type="last" weight="0" label="Edge from User to FlightBookingSystem">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="UserType" target="User" type="last" weight="0" label="Edge from UserType to User">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Airline" target="Flight" type="last" weight="0" label="Edge from Airline to Flight">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="User" target="Notification" type="last" weight="0" label="Edge from User to Notification">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="dict" target="User" type="last" weight="0" label="Edge from dict to User">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Airline" target="FlightBookingSystem" type="last" weight="0" label="Edge from Airline to FlightBookingSystem">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="FlightSchedule" target="Payment" type="last" weight="0" label="Edge from FlightSchedule to Payment">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="FlightStatus" target="Flight" type="last" weight="0" label="Edge from FlightStatus to Flight">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="datetime" target="BookingDetails" type="last" weight="0" label="Edge from datetime to BookingDetails">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="FlightSchedule" target="BookingDetails" type="last" weight="0" label="Edge from FlightSchedule to BookingDetails">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="datetime" target="FlightSchedule" type="last" weight="0" label="Edge from datetime to FlightSchedule">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="datetime" target="FlightBookingSystem" type="last" weight="0" label="Edge from datetime to FlightBookingSystem">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Flight" target="Payment" type="last" weight="0" label="Edge from Flight to Payment">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="datetime" target="Flight" type="last" weight="0" label="Edge from datetime to Flight">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Payment" target="BookingDetails" type="last" weight="0" label="Edge from Payment to BookingDetails">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="FlightSchedule" target="Flight" type="last" weight="0" label="Edge from FlightSchedule to Flight">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="FlightSchedule" target="FlightBookingSystem" type="last" weight="0" label="Edge from FlightSchedule to FlightBookingSystem">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="User" target="Payment" type="last" weight="0" label="Edge from User to Payment">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Flight" target="BookingDetails" type="last" weight="0" label="Edge from Flight to BookingDetails">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Notification" target="BookingDetails" type="last" weight="0" label="Edge from Notification to BookingDetails">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="MealType" target="Meal" type="last" weight="0" label="Edge from MealType to Meal">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="Flight" target="FlightBookingSystem" type="last" weight="0" label="Edge from Flight to FlightBookingSystem">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="User" target="BookingDetails" type="last" weight="0" label="Edge from User to BookingDetails">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+        <edge source="BookingDetails" target="FlightBookingSystem" type="last" weight="0" label="Edge from BookingDetails to FlightBookingSystem">
+            <graphics width="2.0" fill="#848484">
+                <att name="EDGE_LINE_TYPE" value="SOLID" type="string" cy:type="String"/>
+                <att name="EDGE_SOURCE_ARROW_SHAPE" value="ARROW" type="string" cy:type="String"/>
+                <att name="EDGE_TARGET_ARROW_SHAPE" value="OPEN_DIAMOND" type="string" cy:type="String"/>
+            </graphics>
+        </edge>
+    </graph>        

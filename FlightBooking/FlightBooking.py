@@ -4,7 +4,7 @@ from datetime import datetime
 import uuid
 
 
-class UserType:
+class UserType(Enum):
     ADMIN = 3
     CUSTOMER = 1
     OPERATOR = 2
@@ -132,13 +132,18 @@ class Payment:
         self.schedule = schedule
         self.amount = amount
         self.__transaction_id = transaction_id
-
+    @staticmethod
+    def process_payment(user: User, amount: float, transaction_id: str):
+        print(f"Payment of {amount} processed for {user.username}. Transaction ID: {transaction_id}")
 
 class Notification:
     def __init__(self, user: User, message: str, notification_id: str):
         self.user = user
         self.__notification_id = notification_id  # Private
         self.message = message
+    @staticmethod
+    def send_notification(user: User, message: str):
+        print(f"Notification sent to {user.username}: {message}")
 
 
 class BookingDetails:
@@ -160,14 +165,22 @@ class BookingDetails:
 
             self.pnr = str(uuid.uuid4())
             self.status = "booked"
-            self.notifications.append(
-                Notification(self.user, f"Your booking for flight {self.flight.flight_no} has been confirmed.",
-                             str(self.pnr)))
-            self.payments.append(Payment(self.user, self.flight, self.schedule,
-                                         self.schedule.get_duration() * self.no_of_passengers, self.pnr))
+            self.create_notification()
+            self.create_payment()
+            # self.notifications.append(
+            #     Notification(self.user, f"Your booking for flight {self.flight.flight_no} has been confirmed.",
+            #                  str(self.pnr)))
+            # self.payments.append(Payment(self.user, self.flight, self.schedule,
+            #                              self.schedule.get_duration() * self.no_of_passengers, self.pnr))
             return True
         return False
 
+    def create_notification(self):
+        self.notifications.append(Notification(self.user, f"Your booking for flight {self.flight.flight_no} has been confirmed.", str(self.pnr)))
+
+    def create_payment(self):
+        amount = self.schedule.get_duration() * self.no_of_passengers
+        self.payments.append(Payment(self.user, self.flight, self.schedule, amount, self.pnr))
 
 class FlightBookingSystem:
     def __init__(self):
@@ -241,7 +254,7 @@ if __name__ == "__main__":
         seats={1: SeatType.ECONOMY, 2: SeatType.BUSINESS, 3: SeatType.ECONOMY}
     )
     schedule2 = FlightSchedule(
-        1,
+        2,
         start_time=datetime(2024, 12, 25, 15, 0),
         end_time=datetime(2024, 12, 25, 20, 0),
         start_airport=airport2,
