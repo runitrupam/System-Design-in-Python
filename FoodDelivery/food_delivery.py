@@ -25,6 +25,7 @@ Non-Functional Requirements (NFR)
 	•	Compliance: Data protection and privacy laws
 	•	Cross-Platform Support: Accessible on web and mobile
 
+ pyreverse -o png FoodDelivery/food_delivery.py
 
 '''
 
