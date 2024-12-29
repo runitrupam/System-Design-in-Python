@@ -29,8 +29,26 @@ Board
 '''
 
 from typing import List, Dict
-import random
+import random, threading
 
+class Scoreboard:
+    _instance = None
+    _lock = threading.Lock()
+
+    def __new__(cls, *args, **kwargs):
+        with cls._lock:
+            if cls._instance is None:
+                cls._instance = super(Scoreboard, cls).__new__(cls)
+                cls._instance.scores = {}  # Initialize the scores dictionary
+            return cls._instance
+
+    def update_score(self, player_name: str, score: int):
+        with self._lock:  # Use thread-safe lock to update scores
+            self.scores[player_name] = score
+
+    def get_scores(self):
+        with self._lock:  # Use thread-safe lock to read scores
+            return self.scores
 
 class Dice:
     @staticmethod
@@ -90,6 +108,8 @@ class SnakeAndLadder:
     def __init__(self, board: Board, players: List[Player], ):
         self.board = board
         self.players = players
+        self.scoreboard = Scoreboard()
+
 
     def start_game(self):
         while True:
@@ -98,6 +118,7 @@ class SnakeAndLadder:
                 new_position = self.board.get_new_position(new_position)
                 print(
                     f"{player.name} player.current_position = {player.current_position}, new_position = {new_position} !")
+                self.scoreboard.update_score(player.name, new_position)
                 if self.board.is_cell_valid(new_position):
                     player.current_position = new_position
                     print(f"{player.name} moved to cell {new_position}")
@@ -118,3 +139,9 @@ if __name__ == "__main__":
     # players = [Player("Player 1", 1), Player("Player 2", 1)]
     game = SnakeAndLadder(board, players)
     game.start_game()
+
+    sb1 = Scoreboard()
+    sb2 = Scoreboard()
+
+    print('sb1 is sb2', sb1 is sb2)
+    print(sb1.get_scores())
